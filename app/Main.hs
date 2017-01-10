@@ -35,8 +35,8 @@ display globalMb = elem' "div" [] [] content
   content = do
     yesnoMb <- spawn' True
 
-    let btn1 = buttonWith (modifyMailbox yesnoMb (const True)) [] "Set True"   :: Elem IO
-        btn2 = buttonWith (modifyMailbox yesnoMb (const False)) [] "Set False" :: Elem IO
+    let btn1 = buttonWith (modifyMailbox yesnoMb (const True)) [] "Set True"
+        btn2 = buttonWith (modifyMailbox yesnoMb (const False)) [] "Set False"
       in [valentine|
           <div>
             ${btn1}
@@ -44,14 +44,13 @@ display globalMb = elem' "div" [] [] content
             ${showChildContent yesnoMb}
          |]
 
---showContent :: Bool -> Elem Identity
-showContent :: Bool -> Elem IO
+showContent :: Bool -> Elem Identity
 showContent True = elem' "h1" [] [] $ text' "True"
 showContent False = elem' "h1" [] [] $ text' "False"
 
 
 -- This won't work because I need it to be Elem Identity
-showChildContent :: STMMailbox Bool -> Elem IO
+showChildContent :: STMMailbox Bool -> Elem Identity
 showChildContent yesnoMb = elem' "h1" [] []
   $ [valentine|
     <h1>

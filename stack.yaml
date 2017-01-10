@@ -27,7 +27,7 @@ packages:
     git: git@github.com:plow-technologies/ghcjs-vdom.git
     commit: 3bd3c8e6a5ab3306e8b3708c221734accd807255
   extra-dep: true
-- '/home/shulhi/Work/live-vdom'
+- '../live-vdom'
   # - location:
   #     git: git@github.com:plow-technologies/live-vdom.git
   #     commit: 3b43ff6abc8be579cb6843ed24d0ca275e771455
