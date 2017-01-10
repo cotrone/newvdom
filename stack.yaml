@@ -1,0 +1,35 @@
+resolver: lts-7.8
+compiler: ghcjs-0.2.1.9007008_ghc-8.0.1
+compiler-check: match-exact
+
+setup-info:
+  ghcjs:
+    source:
+      ghcjs-0.2.1.9007008_ghc-8.0.1:
+          url: http://ghcjs.tolysz.org/ghc-8.0-2016-11-07-lts-7.8-9007008.tar.gz
+          sha1: 190300a3725cde44b2a08be9ef829f2077bf8825
+
+packages:
+- '.'
+- location:
+    git: git@github.com:plow-technologies/valentine.git
+    commit: 5c9ef3b60e7acb453af1d34f5b4152ac711d4504
+  extra-dep: true
+- location:
+    git: git@github.com:plow-technologies/stm-notify.git
+    commit: f047ee8c82993e79f7241688748e220affda6a73
+  extra-dep: true
+- location:
+    git: git@github.com:ghcjs/ghcjs-ffiqq.git
+    commit: b52338c2dcd3b0707bc8aff2e171411614d4aedb
+  extra-dep: true
+- location:
+    git: git@github.com:plow-technologies/ghcjs-vdom.git
+    commit: 3bd3c8e6a5ab3306e8b3708c221734accd807255
+  extra-dep: true
+- '/home/shulhi/Work/live-vdom'
+  # - location:
+  #     git: git@github.com:plow-technologies/live-vdom.git
+  #     commit: 3b43ff6abc8be579cb6843ed24d0ca275e771455
+  #   extra-dep: true
+
